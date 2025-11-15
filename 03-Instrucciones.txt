@@ -1,0 +1,45 @@
+================================================================================
+INSTRUCCIONES PARA REPLICAR EL EXPERIMENTO DE MULTIPLICACIÓN DE MATRICES
+================================================================================
+
+Este documento explica paso a paso cómo replicar todas las mediciones realizadas
+en los modelos de paralelismo: Fork, POSIX Threads, OpenMP Clásico y OpenMP 
+Filas×Filas. Todas las instrucciones funcionan en macOS y Linux.
+
+-----------------------------------------------
+1. COMPILACIÓN DE LOS PROGRAMAS
+-----------------------------------------------
+
+Ejecutar en la terminal:
+
+    make clean
+    make
+
+Esto genera los ejecutables:
+
+    mmClasicaFork
+    mmClasicaPosix
+    mmClasicaOpenMP
+    mmFilasOpenMP
+
+-----------------------------------------------
+2. EJECUCIÓN AUTOMÁTICA DE LOS EXPERIMENTOS CON 
+   LANZADOR 
+-----------------------------------------------
+
+En lugar de ejecutar cada programa manualmente, el proyecto incluye un script 
+automático llamado:
+
+    lanzador.pl
+
+Este script reproduce todas las pruebas de forma repetible y ordenada.
+
+Para ejecutarlo:
+
+    perl lanzador.pl
+
+Y listo, se generan los archivos de resultado . 
+
+
+
+
